@@ -1,0 +1,143 @@
+html {
+    background: #fff;
+}
+
+button {
+    border: none;
+    border-radius: 8px;
+    margin: 0.25em;
+    width: 2.3em;
+    font-family: "Times";
+    line-height: 200%;
+    background-color: #efefef;
+}
+
+button.underline {
+    text-decoration: underline;
+}
+
+.underline,
+.bold,
+.italic,
+.highlight {
+    font-size: 1em;
+    text-align: center;
+}
+
+.strikethrough {
+    text-decoration: line-through;
+    font-size: 1em;
+}
+
+.editorContainer {
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: center;
+}
+
+.editors {
+    text-align: left;
+    border: none;
+    padding: 2em;
+    border-radius: 8px;
+    border: 1px solid #000000;
+    margin: 20px 0px 0px 0px;
+    font-family: "Open Sans";
+    font-size: 100%;
+    background-image: linear-gradient(to bottom, #fdfbfb 0%, #f6f7fb 100%);
+}
+
+.RichEditor-activeButton {
+    background-color: #feb47b;
+    color: white;
+}
+
+select {
+    padding: 0.5em;
+    border: none;
+    margin: 0.35em;
+    border-radius: 6px;
+    font-family: "Open Sans";
+    font-size: 13px;
+    height: 2.25em;
+}
+
+.submitNote {
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+    margin-left: 20px !important;
+    width: 130px !important;
+    margin-bottom: 20px !important;
+}
+
+.styleButton#bold {
+    font-weight: bold;
+}
+
+.styleButton#italic {
+    font-style: italic;
+    font-family: serif;
+}
+
+.styleButton#underline {
+    text-decoration: underline;
+}
+
+.toolbar {
+    text-align: center;
+    margin: 0.5em;
+    padding: 0.5em;
+}
+
+.styleButton,
+.RichEditor-styleButton {
+    padding: 0.5em;
+    background-image: linear-gradient(to bottom, #fdfbfb 0%, #ebedee 100%);
+    border: none;
+    margin: 0.35em;
+    width: 2.75em;
+    font-family: "Open Sans";
+    font-size: 13px;
+    height: 2.25em;
+    border-radius: 4px;
+}
+
+.RichEditor-activeButton {
+    background-color: #feb47b;
+    color: white;
+}
+
+.grid-cards {
+    padding-left: 40px !important;
+    padding-right: 40px !important;
+    margin-top: 20px !important;
+    width: 100% !important;
+}
+
+.titulo-card {
+    text-overflow: ellipsis;
+    color: #fff !important;
+}
+
+.card-content-fondo {
+    background: #607d8b !important;
+}
+
+header {
+    background: #0d47a1 !important;
+}
+
+.formulario {
+    margin-top: -15px !important;
+    padding-bottom: 20px !important;
+}
+
+.log {
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+    margin-left: 10px !important;
+    width: 130px !important;
+    margin-bottom: 20px !important;
+}

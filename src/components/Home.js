@@ -6,13 +6,12 @@ import Hotel from './Hotel';
 import spinner from "../ajax-loader.gif";
 import Buscar from './Buscar';
 
-const HOTELES_API_URL = "https://almundo-examen.herokuapp.com/api/hoteles";
+// 1. URL con el Proxy para evitar el error de CORS
+const HOTELES_API_URL = "https://corsproxy.io/?https://almundo-examen.herokuapp.com/api/hoteles";
 
 const Home = () => {
     const [state, dispatch] = useReducer(reducer, initialState);
   
-    // El Hook de efecto useEffect equivale a componentDidMount, 
-    // componentDidUpdate y componentWillUnmount combinados.
     useEffect(() => {
       fetch(HOTELES_API_URL)
         .then(response => response.json())
@@ -28,8 +27,9 @@ const Home = () => {
       dispatch({
         type: "BUSCAR_HOTELES_REQUEST"
       });
-  
-      fetch(`https://almundo-examen.herokuapp.com/api/stars/${stars}`)
+      
+      // 2. Segunda URL también con el Proxy
+      fetch(`https://corsproxy.io/?https://almundo-examen.herokuapp.com/api/stars/${stars}`)
         .then(response => response.json())
         .then(jsonResponse => {
           if (jsonResponse.hotels <= null) {
@@ -48,7 +48,6 @@ const Home = () => {
   
     const { hotels, errorMessage, loading } = state;
   
-    // Se muestra loading y lista
     return (
       <div className="App">
         <h4>Buscar por numero de Estrellas (1 a 5)</h4>

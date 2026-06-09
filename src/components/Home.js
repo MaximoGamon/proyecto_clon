@@ -5,6 +5,7 @@ import { reducer, initialState } from '../Reducers/Reducer';
 import Hotel from './Hotel';
 import spinner from "../ajax-loader.gif";
 import Buscar from './Buscar';
+const fecha = new Date();
 
 // DATOS LOCALES: Ya no dependemos de ninguna URL externa
 const DATA_LOCAL = [
@@ -38,12 +39,14 @@ const Home = () => {
       dispatch({
         type: "BUSCAR_HOTELES_FAILURE",
         error: `No se encontraron hoteles con ${stars} estrellas.`
-      });
+      })
+      console.error("Porvafor verifique el numero de estrellas");
     } else {
       dispatch({
         type: "BUSCAR_HOTELES_SUCCESS",
         payload: filtrados
-      });
+      })
+      console.info("Busqueda realizada a las: ",fecha);
     }
   };
 
